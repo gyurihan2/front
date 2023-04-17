@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test09_2.html</title>
+    <script>
+        'use strict';
+
+        function newWindow(){
+            let url="test09_child.html"
+            let winName = "winName"  
+           
+            let winWidth = document.getElementById("left").value;
+             
+            let winheight = document.getElementById("top").value;
+            if(winWidth == "" && winheight != ""){
+                winWidth = winheight*3/2;
+            }
+            else if(winWidth != "" && winheight == ""){
+                winheight= winWidth*2/3;
+            }
+            else{
+                alert("값을 입력하세요")
+            }
+
+            alert(winWidth);
+            alert(winheight);
+            let x= (screen.width/2) - (winWidth/2);
+            let y= (screen.height/2) - (winheight/2);
+
+            let opt = `width=${winWidth},height=${winheight}, left=${x}, top=${y}`;
+            window.open(url,winName,opt);
+        }
+    
+        
+
+    </script>
+</head>
+<body>
+    <h2>새창 띄우기(window.open)</h2>
+    <input type="text" name="left" id="left" placeholder="가로크기를 입력하세요"/>
+    <input type="text" name="top" id="top" placeholder="세로크기를 입력하세요"/>
+    <input type="button" value="새창띄우기" onclick="newWindow()">
+    <hr/>
+    <pre>
+        텍스트박스에 새로 띄어줄 윈도우의 가로/세로 크기를 입력 받는다.
+        새 윈도우는 회면 중아에 띄어줄수 있게 한다.
+        막약 새 윈도우위 폭이 300px이내면 최소 300px로 높이가 200px 이내면 최소 200px로
+        또한, 윈도우의 가로크기만 입력하였을 경우 세로크기는 1/3크로
+        세로 크기만 입력하였을 경우 가로는 2/3크기로
+    </pre>
+</body>
+</html>

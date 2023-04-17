@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+ul, .container{
+    list-style-type: none;
+    padding: 0px;
+    flex-direction: column;
+    border: 2px solid red;
+    display: grid;
+    height: 500px;
+    /*     
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 200px 1fr 1fr;
+    gap: 10px; */
+    grid-template-columns: repeat(2,minmax(200px,auto)); /* 2개열의 아이템의 최소크기를 100px*/
+    grid-template-rows: repeat(3,1fr); /* 2개열의 아이템의 최소크기를 100px*/
+    gap:10px;
+
+}
+
+li{
+    background-color: beige;
+}
+li:nth-child(2n){
+    background-color: pink;
+}

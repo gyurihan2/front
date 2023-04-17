@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test02.html</title>
+    <script>
+        'use strict';
+        let str;
+        function stringtyChk(){
+            const Member={
+                // 필드
+                name : '홍길동',
+                age : 25,
+                color : 'white',
+                birthday : new Date(),
+                size : null,
+                gender : true,
+                //메소드
+                atom :() => {
+                    console.log("성명: " + Member.name);
+                } 
+            }
+
+            str = JSON.stringify(Member);
+            demo1.innerHTML = str;
+        }
+        
+        function parseChk(){
+            stringtyChk();
+            let obj = JSON.parse(str);
+            console.log(obj);
+
+            let temp = '';
+            temp += "name: " + obj.name +"<br/>";
+            temp += "age: " + obj.age +"<br/>";
+            temp += "color: " + obj.color +"<br/>";
+            temp += "birthday: " + obj.birthday +"<br/>";
+            let birthDate = obj.birthday.substring(0,10);
+            console.log(birthDate);
+            demo2.innerHTML = obj;
+        }
+    </script>
+</head>
+<body>
+    <h2>JSON.stringity()/JSON.parse()</h2>
+    <pre>
+        JSON.stringify()
+        오브젝트 객체를 Json형식으로 변환
+        <input type="button" value="stringitfy연습" onclick="stringtyChk()" clss="btn btn-success" />
+        <dev id="demo1"></dev>
+    </pre>
+    <hr/>
+    <pre>
+        JSON.parse()
+        Json형식 객체를 오브젝트로 변환(자바스크립트에서 사용하기위해)
+        <input type="button" value="parse" onclick="parseChk()" clss="btn btn-success" />
+        <dev id="demo2"></dev>
+    </pre>
+    <hr/>
+</body>
+</html>

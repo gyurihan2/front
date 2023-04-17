@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainPage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script>   
+    <link rel="stylesheet"  href="./main.css"></link>
+    <script src="./mainPage.js"></script>
+</head>
+<body>
+    <!-- Top menu -->
+    <div class="container-xl top_title  pt-3 pb-0">
+        <div class="row  align-items-end">
+            <div class="d-inline-flex"><a href="./main.html"><img id="topLogoImg" src="../images/cgv_images/logo.png"></a></div>
+            <div class="d-inline-flex" id="topLogoSide">CULTUREPLEX</div>
+            <div class="col-4   "></div>
+            <div class="col">
+                <div class="container text-center topTitleSide">
+                    <div class="row ">
+                        <div class="col "><a href="#" class="text-secondary"><img src="../images/cgv_images/login.png" ><br/>로그인</a></div>  
+                        <div class="col"><a href="#" class="text-secondary"><img src="../images/cgv_images/mycgv.png"><br/>MY CGV</a></div>
+                        <div class="col"><a href="./sign_up2.html" class="text-secondary"><img src="../images/cgv_images/register.png"><br/>회원가입</a></div>
+                        <div class="col"><a href="#" class="text-secondary"><img src="../images/cgv_images/support.png "><br/>고객센터</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main menu -->
+    <hr style="margin-bottom: 0px;"/>
+    <div class="container mainMenu">
+        <div class="row align-items-center">
+            <div class="col font-weight-bold menubar">
+                <a class="text-secondary" href="#">영화</a>
+                <a class="text-secondary" href="#">예매</a>
+                <a class="text-secondary" href="#">상영관</a>
+                <a class="text-secondary" href="#">공지사항</a>
+            </div>
+            <div class="col">
+                <nav class="navbar navbar-expand-xl justify-content-end serchMovie">
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="영화 검색">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </nav>
+            </div>
+        </div>  
+    </div>
+    <hr style="margin-top: 0px;"/>
+
+    <!-- --------------------------------- 트레일러 영상------------------------------------ -->
+    <div class="container-fluid text-center mainTrailer">
+        <!-- 메인 영화 예고편 -->
+        <div class="row "id="trailer">
+            <div class="col">
+                <iframe  src="https://www.youtube.com/embed/d2VN6NNa9BE?" title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- 영화 목록 -->
+    <div class="container-fluid  p-3 mainContainer">
+        <div class="row">
+            <div class="col">
+                <div class="container-xl" id="movieContets">
+                    <div class="row">
+                        <div class="col-4  text-left" id="movieStaus">
+                            <button type="button" class="btn btn-light text-secondary font-weight-bold">무비차트</button>
+                            <button type="button" class="btn btn-light text-secondary font-weight-bold">상영예정</button>
+                        </div>
+                        <div class="col "></div>
+                        <div class="col-2  text-right" id="movieAllView"><button><b>전체 보기 ></b></button></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col align-self-center"> <!--왼쪽 공백-->
+                           <button class="btn" type="button" onclick="movieChartPrevious()" style="visibility: hidden;" id="moviePrevious">
+                               <p><i class="fas fa-long-arrow-left fa-4x" style="color: #363535;"></i></p>
+                           </button>  
+                        </div>
+                        <div class="col text-center moviecontent movienext" >
+                            <a href="#"><img name="movieChartImg" src="../images/cgv_images/jw.jpg"></a>
+                            <br/><span name="movieChartName">존윅4</span>
+                        </div>
+                        <div class="col text-center moviecontent">
+                            <a href="#"><img name="movieChartImg" src="../images/cgv_images/slamdunk.jpg"></a>
+                            <br/><span name="movieChartName">슬램덩크</span>
+                        </div>
+                        <div class="col text-center moviecontent">
+                            <a href="#"><img name="movieChartImg" src="../images/cgv_images/스즈메.jpg"></a>
+                            <br/><span name="movieChartName">스즈메의 문단속</span>
+                        </div>
+                        <div class="col text-center moviecontent">
+                            <a href="#"><img name="movieChartImg" src="../images/cgv_images/rebound.jpg"></a>
+                            <br/><span name="movieChartName">리바운드</span>
+                        </div>
+                        <div class="col align-self-center movienext"><!--오른쪽 공백-->   
+                            <button class="btn" type="button" onclick="movieChartNext()" id="movieNext">
+                                <p><i class="fas fa-long-arrow-right fa-4x" style="color: #363535;"></i></p>
+                            </button>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <div class="specialhall_list">
+                    <div id="specialhall">
+                        <div><h2>특별관</h2></div>
+                        
+                        <div id="specialhall_content">
+                            <div id="hall_imags" style="float: left; padding-top: 10px;">
+                                <img id="test11" src="../images/cgv_images/imax.png">
+                            </div>
+                            <div id="hall_lists" onmouseover=movieHallAutoStop()>
+                                <ul id="hall_list">
+                                    <li id="imax" onmouseover=changeImgHall(this)><a href="#"><strong>IMAX</strong><span>#대형스크린 #최고의몰입감</a></span></li>
+                                    <li id="4dx" onmouseover=changeImgHall(this)><a href="#"><strong>4DX</strong><span>#모션 시트 #오감체험</span></li></a>
+                                    <li id="screenx" onmouseover=changeImgHall(this)><a href="#"><strong>SCREENX </strong><span>#3면 확장스크린 #270도스크린</span></li></a>
+                                    <li id="primium" onmouseover=changeImgHall(this)><a href="#"><strong>PREMIUM </strong><span>#리클라이너#최고급 좌석</span></a>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>

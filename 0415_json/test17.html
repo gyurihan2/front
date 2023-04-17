@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test17.html</title>
+    <script>
+        'use strict';
+        let arr1 = [10,8,20,15,11,17];
+
+        //정렬: sort() 오름차순 정렬
+
+        let arr2 = arr1.sort();
+
+        console.log("1.오름차순 정렬" + arr2);
+
+        //역순 정렬 : revers() - 문자형식의 내림차순 정렬
+        arr2= arr1.reverse();
+        console.log("2.내림차순 정렬" + arr2);
+
+        //최대 최소값 max min
+        arr2= Math.max(...arr1);
+        console.log("3.최대값" + arr2);
+        
+        arr2= Math.min(...arr1);
+        console.log("3.최솟값" + arr2);
+        
+    </script>
+</head>
+<body>
+    <h2>배열연습</h2>
+    <hr/>
+    <div id="demo"></div>
+</body>
+</html>

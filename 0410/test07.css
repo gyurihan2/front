@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+ul, .conteiner{
+    display: flex;
+    list-style-type: none;
+    height: 300px;
+    padding: 0px;
+    flex-direction: column;
+    /* flex-direction: column-reverse; */
+    flex-wrap: wrap-reverse;
+    border: 2px solid red;
+
+    /* justify-content: center; */
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    /* align-content: space-between; */
+}
+
+li:nth-child(3){
+    align-self: flex-start;
+}

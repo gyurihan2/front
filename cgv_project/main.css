@@ -1,0 +1,226 @@
+/* 공통 */
+body{
+    margin: 0 auto;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+    color: rgb(58, 55, 55);
+}
+
+/* PC */
+/* top_menu CSS */
+.top_title{
+    width:1140px;
+}
+#topLogoImg{
+    width:117px; 
+    height:53px;
+}
+.topTitleSide a{
+    text-decoration: none;
+}
+.topTitleSide a img{
+    width: 26px; height:26px;
+}
+
+.mainMenu{
+    width:1140px; 
+}
+
+.menubar a{
+    margin-left: 20px;
+    text-decoration: none;    
+}
+
+/* 트레일러 */
+.mainTrailer{
+    background: radial-gradient(rgb(54, 52, 52), black); 
+    height: 500px;
+}
+#trailer{
+    position: relative;
+    height: 100%;
+    width: 950px;
+}
+#trailer iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* 영화 목록 */
+.mainContainer{
+    background-color:#FBFBFB;
+}
+#movieContets{
+    width:1140px; 
+    height: 350px; 
+}
+#movieAllView button{
+    border-radius: 30px;
+    font-size: smaller; 
+    border: 1px solid black;
+}
+.moviecontent img{
+    width: 170px; 
+    height: 234px;
+}
+
+/* 상영관 */
+.specialhall_list{
+    width: 100%;
+    height: 350px;
+}
+
+#specialhall{
+    position: relative;
+    margin: auto;
+    width: 889px;
+    height: 340px;
+}
+#specialhall_content{
+    float: right;
+    width: 889px;
+}
+#hall_imags img{
+    width: 350px; 
+    height: 185px;
+    border-radius:30px 30px;
+}
+#hall_lists{
+    width: 500px;
+    float: left;
+}
+#hall_list{
+    list-style-type: none;
+}
+#hall_list > li{
+    padding: 10px;
+    border-top: 1px solid black;
+}
+#hall_list > li:hover{
+   background-color: antiquewhite;
+}
+#hall_list > li span{
+    float: right;
+}
+
+@media screen and (max-width:1023px){
+    .top_title{
+        width:590px;
+        padding-top: 3px;
+        padding-bottom: 0; 
+        font-size: 0.7em;
+    }
+    #topLogoImg{
+        width:71px; 
+        height:32px;
+    }
+    .topTitleCenter{
+        width: 50px;
+    }
+    .topTitleSide  a {
+        font-size: 0.3em;
+    }
+    .topTitleSide  a img{
+        width: 16px; 
+        height:16px;
+    }
+    
+    .mainMenu{
+        width:590px;
+        font-size: 1em;
+    }
+    .menubar a{
+        margin-left: 20px;
+        font-size: 0.8em;
+        text-decoration: none;    
+    }
+    .serchMovie input{
+        width: 120px;
+        height: 30px;
+        font-size: 0.7em;
+    }
+    .serchMovie button{
+        width: 50px;
+        height: 30px;
+        font-size: 0.7em;
+        padding-left: 8px;
+        
+    }
+    /* 트레일러 */
+    .mainTrailer{
+        background: radial-gradient(rgb(54, 52, 52), black); 
+        height: 350px;
+    }
+    #trailer{
+        height: 100%;
+        width: 490px;
+    }
+
+    /* 영화 목록 */
+   
+    #movieContets{
+        width:590px; 
+        height: 150px;
+    }
+    
+    #movieStaus button{
+        font-size: 0.5em;
+    }
+    #movieAllView button{
+        border-radius: 30px;
+        font-size: 0.5em; 
+        border: 1px solid black;
+    }
+    .moviecontent img{
+        width: 70px; 
+        height: 100px;
+    }
+    .movienext{
+        width: 50px;
+    }
+    
+    /* 상영관 */
+    .specialhall_list{
+        width: 100%;
+        height: 350px;
+    }
+    
+    #specialhall{
+        position: relative;
+        margin: auto;
+        width: 590px;
+        height: 340px;
+    }
+    #specialhall h2{
+        font-size: 1.5em;
+    }
+    #specialhall_content{
+        float: right;
+        width: 590px;
+    }
+    #hall_imags img{
+        width: 250px; 
+        height: 132px;
+        border-radius:30px 30px;
+    }
+    #hall_lists{
+        width: 250px;
+        float: left;
+        font-size: 0.6em;
+    }
+    #hall_list{
+        list-style-type: none;
+    }
+    #hall_list > li{
+        padding: 10px;
+        border-top: 1px solid black;
+    }
+    #hall_list > li:hover{
+       background-color: antiquewhite;
+    }
+    #hall_list > li span{
+        float: right;
+    }
+}

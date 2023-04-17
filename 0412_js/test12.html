@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test12.html</title>
+    <script>
+        'use strict';
+
+        function msg1(){
+            // alert("메시지 출력");
+            var su = prompt("수를 입력하세요>");
+            var hap = (su +100);
+            console.log("su1 +100: "+ hap);
+            var hap = eval(su) + 100;
+            console.log("su1 +100: "+ hap);
+           let ans = confirm("작업");
+            console.log("ans: " + ans);
+        }
+      
+        
+    </script>
+</head>
+<body>
+    <h2>스크립트를 통한 입출력</h2>
+    <p>값을 입력 하세요
+        <input type="button" value="입력" onclick="msg1()" />
+
+    </p>
+</body>
+</html>

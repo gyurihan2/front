@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test17.html</title>
+    <style>
+        #layer1{
+            width:600px;
+            height: 400px;
+            /* background-color: aqua; */
+            background-image: url("../images/3.PNG");
+        }
+        #tbl1, #tbl2, #tbl3{
+            border: 1px solid black;
+            width:600px;
+            height: 400px;
+            border-collapse: collapse;
+        }
+        #tbl1{
+            background-color: aqua;
+            background-image: url("../images/3.PNG");
+            background-position: right bottom;
+            background-repeat: no-repeat;
+        }
+        #tbl2{
+            border: 5px solid blue;
+        }
+        td{
+            border: 5px solid blue;
+            text-align: center;
+            margin:0px;
+            padding:0px
+        }
+        .tra{
+            background-color: aqua;
+        }
+        #tbc{
+            background-image: url("../images/1.PNG");
+        }
+        #tro{
+            /* 가로 그라데이션 */
+            background: linear-gradient(to right,yellowgreen,blue);
+        }
+        #trp{
+            /* 원형 그라데이션 */
+            background: radial-gradient(circle,white,red)
+        }
+        #tbl3{
+            background: radial-gradient(circle,white,red);
+        }
+        #trq{
+            /* 원형 그라데이션 */
+            background-image: url("../images/1.PNG");
+        }
+        #trr{
+            /* 원형 그라데이션 */
+            background: linear-gradient(to right,yellowgreen,blue);
+        }
+    </style>
+</head>
+<body>
+    <div id="layer1"></div>
+    <table id="tbl1">
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    <br>
+    <table id="tbl2">
+        <tr class="tra">
+            <td style="width: 50%;">1</td>
+            <td style="width: 25%;">2</td>
+            <td style="width: 25%;">3</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+        </tr>
+        <tr class="tra">
+            <td><img src="../images/1.PNG" width="80px"/></td>
+            <td>22</td>
+            <td id="tbc">23</td>
+        </tr>
+    </table>
+    <table id="tbl3">
+        <tr id="tro">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr id="trp">
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+        </tr>
+        <tr id="trq">
+            <td></td>
+            <td>22</td>
+            <td>23</td>
+        </tr>
+        <tr id="trr">
+            <td></td>
+            <td>22</td>
+            <td>23</td>
+        </tr>
+    </table>
+</body>
+</html>

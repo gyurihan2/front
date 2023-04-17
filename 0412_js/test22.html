@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>test22.html</title>
+    <script>
+        'use strict';
+        function clac(){
+            let su1 = document.getElementById("su1").value;
+            let su2 = document.getElementById("su2").value
+            let op = document.myform.op.value;
+            let res = eval(su1 + op + su2);
+            let temp = su1 + op + su2;
+            alert("출력 결과\n " + res +" : "+temp + "입니다.");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+
+        <form name="myform" id="myform">
+            <table class="table table-primary text-center">
+                <tr class="border-less">
+                    <td colspan="2"><h2>두수를 입력하여 4칙 연산 계산하기</h2></td>
+                </tr>
+                <tr>
+                    <td> 첫번째 수 : </td>
+                    <td><input type="number" name="su1"  id="su1" value="0" /></td>
+                </tr>
+                <tr>
+                    <td> 연산자  : </td>
+                    <td> 
+                        <select name="op" id="op">
+                        <option value="+">더하기</option>   
+                        <option value="-">빼기</option>
+                        <option value="*">곱하기</option>
+                        <option value="/">나누기</option>
+                        </select
+                    </td>
+                </tr>
+                <tr>
+                    <td>두번째 수 : </td>
+                    <td> <input type="number" name="su2" id="su2" min="0" value="0" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <input type="button" value="계산" onclick="clac()" class="btn btn-success" /></td>
+                </tr> 
+            </table>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test09.html</title>
+    <script>
+        function backClear(){
+            if(myform.str.value==""){
+                alert("문자를 입력하세요");
+            }
+            else{
+                myform.str.value = myform.str.value.substring(0,myform.str.value.length-1);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>텍스트박스에 입력된 글자를 뒤에서부터 1글자씩 모두 지우시오</h2>
+    <p>글자가 다 지워지면 다시 입력 받도록 메시지를 띄우시오</p>
+    <form name="myform">
+        <div>문자입력
+            <input type="text" name="str" id="str" placeholder="문자를 입력하세요" />
+            <input type="button" value="BackSpace" onclick="backClear()"/> 
+        </div>
+    </form>
+</body>
+</html>

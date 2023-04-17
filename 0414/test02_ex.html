@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입폼 만들기(정규식 활용)</title>
+    <script>
+
+
+        const regMid = /[a-zA-Z0-9]{4,20}/g;
+        const regPwd = /^[\w~!@#$%^&*()+]{4,20}$/g;
+
+
+        function reg(){
+            let str = myform.aaa.value;
+            console.log(str);
+            console.log(regMid);
+
+            if((!regMid.test(str))){
+                alert("값을 확인하요");
+                return false;
+            }
+            alert("통과");
+           
+        }
+    </script>
+</head>
+<body>
+    <!-- 
+        아이디: 영문자,숫자,_ 포함으로 4~20자 까지
+        비밀번호: 영문자,숫자,_,특수문자(~!@#$%^&*()_+,.?<>[]{}한문자 이상) 포함으로 4~20자 까지
+        닉네임: 한글만 사용 가능
+        성명: 한글,영문 사용가능
+        이메일: 이메일 형식에 맞도록
+        홈페이지주소: URL 형식에 맞도록
+        전화번호: 전화번호형식(지역번호(2~3) - 국번호(3~4) - 전화번호(4))
+        주민번호: 앞쪽 6자리 - 뒷쪽(1~4)
+     -->
+     <form name="myform">
+         <input type="text" id="aaa" value="11111">
+         <input type="button" onclick="reg()" value="확인">
+
+     </form>
+</body>
+</html>

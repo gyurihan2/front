@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainPage.html</title>
+    <style>
+        .top{
+            position:  relative;
+            margin: auto;
+            padding: 10px;
+            width: 950px;
+            height: 60px;
+            top: 15px;   
+        }
+        #top_menulog{
+            position:  relative;
+            bottom: -15px;
+            width: 117px;
+            height: 53px;
+        }
+        #logo_side{
+            position: absolute;
+            bottom: 5px;
+        }
+        #top_right {
+            position: absolute;
+            right: 0px;
+            bottom: -5px;  
+        }
+        #top_right > div{
+            float: right;
+            width: 45px;
+            height: 50px;
+            font-size: 1px;
+            text-align: center;
+            margin: 15px;     
+        }
+        #top_right > div > a{
+            text-decoration: none;
+            color:rgb(58, 55, 55)
+        }
+        #mtop_right > div > a > span{
+           color:rgb(58, 55, 55)
+        }
+        #top_right > div > a > img{
+            width: 36px;
+            height: 36px;
+        }
+
+        /* Main Menu */
+        .top_menu{
+            /* position: absolute; */
+            background-color: white;
+            margin-top: 0px;
+            width: 100%;
+        }
+        #main_menu{
+            left: 50%;
+            transform: translate(50%, 0);
+            width: 950px;
+            height: 30px
+        }
+        #main_menu > div{
+            margin: 0px 10px;
+            height: 30px;
+            width: 70px;
+            text-align: center;
+            float: left;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(58, 55, 55);
+        }
+        #main_menu > div > a > span:hover{
+            top: 30px;
+            width:100%;
+            height: 100px;
+            border: solid 1px red;
+        }
+        /* #main_menu > div > a{
+            color: rgb(58, 55, 55);
+        } */
+
+        /* movietrailer */
+        .main_movietrailer{
+            width: 100%;
+            background: radial-gradient(rgb(54, 52, 52), black);
+        }
+        #movietrailer{
+            margin: auto;
+            width: 889px;
+            height: 500px;  
+        }
+
+        /* 영화 목록 */
+        .main_moviechart{
+            padding-top: 30px;
+            width: 100%;
+            height: 350px;
+            background-color: rgb(236, 230, 230); 
+        }
+        #moviechart{
+            position: relative;
+            margin: auto;
+            /* vertical-align: middle; */
+            width: 889px;
+            height: 340px;  
+        }
+        .moviecontents{
+            position: absolute;
+            width: 889px;
+            height: 294px;
+        }
+        .moviecontents > div{
+            margin-right: 50px;
+            float: left; 
+            text-align: center;
+        }
+        /* 상영관 */
+        .specialhall_list{
+            width: 100%;
+            height: 350px;
+        }
+        #specialhall{
+            position: relative;
+            margin: auto;
+            width: 889px;
+            height: 340px;
+        }
+        #specialhall_content{
+            float: right;
+            width: 889px;
+        }
+        #hall_lists{
+            width: 500px;
+            float: left;
+        }
+        #hall_list{
+            list-style-type: none;
+        }
+        #hall_list > li{
+            padding: 10px;
+            border-top: 1px solid black;
+        }
+        #hall_list > li:hover{
+           background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body style="margin-left: 0px; margin-right: 0px;">
+    <!-- Top Menu  -->
+    <div class="top">
+            <a href="#"><img src="../cgv_images/logo.png" id="top_menulog"></a>
+            <span id="logo_side">CULTUREPLEX</span>
+            <div id="top_right">
+                <div><a href="#"><img src="../cgv_images/support.png">&nbsp;고객센터</a> </div>
+                <div><a href="#"><img src="../cgv_images/mycgv.png">&nbsp;MY CGV</a></div>
+                <div><a href="#"><img src="../cgv_images/register.png">&nbsp;회원가입</a></div>
+                <div><a href="#"><img src="../cgv_images/login.png">&nbsp;로그인</a></div>
+            </div>
+    </div> 
+    <br> 
+    <br> 
+    <hr>               
+    <!-- Main Menu -->
+    <div class="top_menu">
+        <div id="main_menu">
+            <div><a href="#"><span>영화</span></a></div>
+            <div><a href="#"><span>예매</span></a></div>
+            <div><a href="#"><span>상영관</span></a></div>
+            <div><a href="#"><span>공지사항</span></a></div>
+            <span style="float: right;">&nbsp;<input type="button" value="검색"> |</span>
+            <span style="float: right;">| <input type="text" placeholder="영화검색" style="width: 100px;"></span>
+        </div>
+        <br>
+    </div>
+    
+    <br/>
+    <br/>
+    <!-- 예고편 -->
+    <div class="main_movietrailer">
+        <div id="movietrailer">
+            <iframe width="889" height="500" src="https://www.youtube.com/embed/d2VN6NNa9BE?" title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen"></iframe>
+        </div>
+    </div>
+    <!-- 영화 목록 -->
+    <div class="main_moviechart">
+        <div id="moviechart">
+            <span><a href="#"><b>무비차트</b></a></span>
+            <span>|</span>
+            <span><a href="#"><b>상영 예정작</b></a></span>
+            <br/> <br/>
+            <div class="moviecontents">
+                <div>
+                    <a href="#"><img src="../cgv_images/jw.jpg" style="width: 170px; height: 234px;"></a>
+                    <br/><span>존윅4</span>
+                </div>
+                <div>
+                    <a href="#"><img src="../cgv_images/slamdunk.jpg" style="width: 170px; height: 234px;"></a>
+                    <br/><span>슬램덩크</span>
+                </div>
+                <div>
+                    <a href="#"><img src="../cgv_images/스즈메.jpg" style="width: 170px; height: 234px;"></a>
+                    <br/><span>스즈메의 문단속</span>
+                </div>
+                <div>
+                    <a href="#"><img src="../cgv_images/rebound.jpg" style="width: 170px; height: 234px;"></a>
+                    <br/><span>리바운드</span>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <div class="specialhall_list">
+        <div id="specialhall">
+            <div><h2>특별관</h2></div>
+            
+            <div id="specialhall_content">
+                <div id="hall_imags" style="float: left; padding-top: 10px;">
+                    <img src="../images/cgv_images/imax.png" style="width: 350px; height: 185px ;border-radius: 30px 30px ;">
+                </div>
+                <div id="hall_lists">
+                    <ul id="hall_list">
+                        <li id="imax" style="border-bottom: 1px solid black;"><a href="#"><strong>IMAX</strong><span style="float: right;">#대형스크린 #최고의몰입감</a></span></li>
+                        <li id="4dx" style="border-bottom: 1px solid black;"><a href="#"><strong>4DX</strong><span style="float: right;">#모션 시트 #오감체험</span></li></a>
+                        <li id="screenx" style="border-bottom: 1px solid black;"><a href="#"><strong>SCREENX </strong><span style="float: right;">#3면 확장스크린 #270도스크린</span></li></a>
+                        <li id="premium" style="border-bottom: 1px solid black;"><a href="#"><strong>PREMIUM </strong><span style="float: right;">#리클라이너#최고급 좌석</span></a>
+                        </li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>dfd
+</html>

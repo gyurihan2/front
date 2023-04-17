@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>test07_2.html</title>
+    <script>
+        'use strict';
+        function calc(){
+            // let su = myform.su.value;
+            let pirces = document.getElementsByName("pirce");
+            let products = document.getElementsByName("product");
+            let price=0,str='<table class="table" style="width:700px; margin:auto;">';
+
+            for(let i=0;i<pirces.length;i++){
+                str += "<tr><td>상품"+(i+1)+": "+products[i].value+"</td> <td>"+pirces[i].value+"원</td></tr>"
+                price += eval(pirces[i].value);
+            }
+            demo.innerHTML=str+"</table><br/><h2>총합: "+price+"원 입니다.</h2>";
+        }
+    </script>
+</head>
+<body>
+    <h2>멀티 텍스트 입력 처리 연습</h2><br/>
+    <div class="container-xl">
+        <form name="myform" style="width:1140px">
+            <table class="table text-center">
+                <tr class="table-borderless">
+                    <td>상품1<input type="text" name="product" value="냉장고"/></td>
+                    <td>가격1<input type="number" name="pirce" value="1"/></td>
+                </tr>
+                <tr>
+                    <td> 상품2<input type="text" name="product" value="오디오"/></td>
+                    <td>가격2<input type="number" name="pirce" value="2"/></td>
+                </tr>
+                <tr>
+                    <td> 상품3<input type="text" name="product" value="TV"/></td>
+                    <td>가격3<input type="number" name="pirce" value="3"/></td>
+                </tr>
+                <tr>
+                    <td>상품4<input type="text" name="product" value="선풍기"/></td>
+                    <td>가격4<input type="number" name="pirce" value="4"/></td>
+                </tr>
+                <tr>
+                    <td>상품5<input type="text" name="product" value="세탁기"/></td>
+                    <td>  가격5<input type="number" name="pirce" value="5"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="button"  onclick="calc()" class="btn btn-secondary btn-sm form-control mt-2">계산</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <hr/>
+    <div id="demo" style="text-align: center;"></div>
+</body>
+</html>

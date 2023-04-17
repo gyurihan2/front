@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+    <title>test06.html</title>
+    <script>
+        'use strict'
+
+        $(()=>{
+           let atom =  $('.test').css('color','orange');
+           console.log(atom);
+           console.log(atom[0]);
+           console.log();
+
+           for(let a of atom){
+            console.log(a);
+           }
+
+           atom.each((index,i,arr) => {
+                if(index == 2) $(i).css({'color':'red','fontSize':'20px'});
+           });
+        
+        })
+    </script>
+</head>
+<body>
+
+    <pr><br/></pr>
+    <div class="container">
+        <h2> 진달래꽃</h2>
+        <p>작가: 김소월</p>
+        <div class="yeon">1연</div>
+        <div>나보기가 <span class="test">역겨워</span> 가실때에는</div>
+        <div>말없이 고이보내 드리오리다</div>
+        <div class="yeon">2절</div>
+        <div>영변에 약산 진달래꽃</div>
+        <div><span class="test main">아름따라</span> 가실길에 뿌리오리다.</div>
+        <div class="yeon">3연</div>
+        <div>가시는 걸음걸음 놓인 그 꽃을</div>
+        <div>사뿐이 <span class="test">즈려밟고</span> 가시옵소서</div>
+        <div class="yeon">4연</div>
+        <div>나보기가 <span class="main">역겨워</span> 가실때에는</div>
+        <div>죽어도 <span class="test">아니 눈물</span> 흘리오리다.</div>
+        <div>The End</div>
+        
+        <div id="demo"></div>
+
+    </div>
+    <pr><br/></pr>
+</body>
+</html>

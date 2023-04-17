@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test04.html</title>
+    <script>
+        'use strict';
+        // 윈도우(브라우저)에 입력되는 모든 키를 감시
+        // let keyCode=window.event.keyCode;
+        // if(keyCode == 13) urlCheck();   //13: 엔터키
+
+
+        function urlCheck(){
+            let url = document.getElementById("url").value.trim();
+
+            if(url==""){
+                alert("이동할 주소를 확인하세요");
+                document.getElementById("url").focus();
+            }
+            else{
+                location.href = "https://" +url;
+            }
+        }
+        function enterCheck(){
+            // 윈도우(브라우저)에 입력되는 모든 키를 감시
+            let keyCode=window.event.keyCode;
+            if(window.event.keyCode == '13') urlCheck();   //13: 엔터키
+        }
+    </script>
+</head>
+<body>
+    <p>
+        이동할 주소를 입력후 이동버튼을 클리하면 해당 주소로 이동하기
+    </p>
+    <hr/>
+    <form action="#">
+        <div>
+            이동할 주소: <input type="text" name="url" id="url" placeholder="이동할 주소 입력" onkeydown="enterCheck()"/>
+            <input type="button" value="이동" onclick="urlCheck()"/>
+        </div>
+    </form> 
+</body>
+</html>

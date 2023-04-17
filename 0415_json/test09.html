@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test09.html</title>
+    <script>
+        function font32(){
+            document.getElementById("demo").style.fontSize='32px';  //카멜 표기법
+        }
+    </script>
+</head>
+<body>
+    <h2>글자 속성 변경하기</h2>
+    <p>
+        <button type="button" onclick="font32()" class="btn btn-success">글꼴2em(32px)</button>
+        <button type="button" onclick="document.getElementById('demo').style.fontSize='50px';" class="btn btn-success">글꼴2em(32px)</button>
+        <button type="button" onclick="location.reload()" class="btn btn-success">글꼴2em(32px)</button>
+    </p>
+    <hr/>
+    <div id="demo">자바스크리트명령으로 글자크기 변경하기</div>
+</body>
+</html>

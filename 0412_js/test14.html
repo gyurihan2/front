@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test14.html</title>
+    <script>
+        'use strict';
+        function clac(){
+            // DOM 객체(name으로)
+            let su1 = document.myform.su1.value;
+            let su2 = document.myform.su2.value;
+            let op = document.myform.op.value;
+            let res = eval(su1 + op + su2);
+            let temp = su1 + op + su2;
+            alert("출력 결과\n " + res +" : "+temp + "입니다.");
+            let ans = confirm("작업을 계속 할까요");
+            if(ans){
+                alert("작업을 계속 합니다.");
+                clac();
+            }
+            else{
+                alert("작업끝.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>두수를 입력하여 4칙 연산 계산하기</h2>
+    <form name="myform" id="myform">
+        <p>
+        첫번째 수 : <input type="number" name="su1"  id="su1" value="0" /> <br />
+        연산자 : <input type="text" name="op" id="op" value="+" /> <br />
+        두번째 수 : <input type="number" name="su2" id="su2" value="0" /> <br />
+            <input type="button" value="계산" onclick="clac()" />
+        </p>
+    </form>
+    
+   
+</body>
+</html>
